@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Homepage</title>
+    <style>
+        body {
+            background-color: #090808;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #090808;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #48484c;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            padding: 10px;
+            margin: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:rgb(244, 61, 61);
+            padding: 10px;
+        }
+
+        .nav-btn {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(244, 61, 61);
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background-color: #291da8;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(238, 49, 49);
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .slider-container {
+            background-color: #090808;
+            color: rgb(238, 49, 49);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .slider {
+            display: inline-block;
+            padding: 10px;
+            animation: slide 15s linear infinite;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        #schoolImages {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .schoolImage {
+            max-width: 220px;
+            flex: 0 1 18%;
+        }
+
+        #schoolInfo {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        #schoolVideo {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        #submitbutton {
+            background-color: rgb(238, 49, 49);
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #takeAdmissionButton:hover {
+            background-color: #555;
+        }
+
+        form {
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            background-color:  rgb(244, 61, 61);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .radio-buttons {
+    display: flex;
+    align-items: justified;
+}
+
+.radio-buttons div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add justified spacing */
+    margin-bottom: 5px; /* Adjust spacing between each radio button and its label */
+}
+
+.radio-buttons input[type="radio"] {
+    margin-right: 10px; /* Adjust spacing between radio buttons and labels */
+}
+
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>FinSecure</h1>
+    <img src="images/logo.png" alt="School Logo" width="100">
+</header>
+
+<nav>
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="about.html" class="nav-btn">About</a>
+    <a href="service.html" class="nav-btn">Service</a>
+    <a href="contact.html" class="nav-btn">Contact Us</a>
+</nav>
+
+<section>
+    <h1>Find top plans for you</h1>
+    <div class="slider-container">
+        <div class="slider">PERSONALIZED FINANCIAL GUIDANCE SYSTEM</div>
+    </div>
+
+    <form action="connect.jsp" method="post" autocomplete="on">
+        <p>All fields marked with * are required</p>
+        <label for="firstName">First Name * :</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name * :</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label>Gender * :</label>
+        <div class="radio-buttons">
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label><br>
+        </div>
+
+        <label for="age">Age * :</label>
+        <input type="int" id="age" name="age" required>
+
+        <label for="phoneNumber">Phone Number * :</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+        <label for="email">Email * :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="monthlyincome">Monthly Income:</label>
+        <input type="int" id="monthlyincome" name="monthlyincome">
+
+        <label for="existingsavings">Existing Savings:</label>
+        <input type="int" id="existingsavings" name="existingsavings">
+
+        <label for="debtobligations">Debt Obligations:</label>
+        <input type="int" id="debtobligations" name="debtobligations">
+
+        
+        <label>Risk Factor * :</label>
+        <div class="radio-buttons">
+            <div>
+                <input type="radio" id="0" name="riskfactors" value="0" required>
+                <label for="0">Low</label><br>
+            </div>
+            <div>
+                <input type="radio" id="1" name="riskfactors" value="1" required>
+                <label for="1">Medium</label><br>
+            </div>
+            <div>
+                <input type="radio" id="2" name="riskfactors" value="2" required>
+                <label for="2">High</label><br>
+            </div>
+        </div>
+
+        <label for="householdsize">Households Size:</label>
+        <input type="int" id="householdsize" name="householdsize">
+
+        <button type="submit">Click to Know More</button>
+        <button type="reset">Clear</button>
+    </form>
+
+</body>
+</html>

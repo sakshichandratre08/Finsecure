@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Data Processor</title>
+</head>
+<body>
+    <h1>Form Data Processor</h1>
+    <form method="post" action="connect.jsp">
+        <label for="monthlyIncome">Monthly Income:</label>
+        <input type="number" id="monthlyIncome" name="monthlyIncome" required>
+        <br>
+        <label for="monthlyExpenses">Monthly Expenses:</label>
+        <input type="number" id="monthlyExpenses" name="monthlyExpenses" required>
+        <br>
+        <label for="existingSavings">Existing Savings:</label>
+        <input type="number" id="existingSavings" name="existingSavings" required>
+        <br>
+        <label for="debtObligations">Debt Obligations:</label>
+        <input type="number" id="debtObligations" name="debtObligations" required>
+        <br>
+        <label for="riskFactor">Risk Factor:</label>
+        <select id="riskFactor" name="riskFactor" required>
+            <option value="0">Low</option>
+            <option value="1">Medium</option>
+            <option value="2">High</option>
+        </select>
+        <br>
+        <label for="householdSize">Household Size:</label>
+        <input type="number" id="householdSize" name="householdSize" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
